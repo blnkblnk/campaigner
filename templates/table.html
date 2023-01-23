@@ -1,0 +1,10 @@
+
+<table>
+    {% for i in range(num_cells) %}
+        <tr>
+            {% for j in range(num_cells) %}
+                <td>{{ i }},{{ j }}</td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+</table>

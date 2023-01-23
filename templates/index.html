@@ -1,0 +1,19 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<table id="table_div"></table>
+<button id="generate_table" onclick="generateTable()">Generate Table</button>
+
+
+<script>
+    function generateTable() {
+        fetch("/generate_table")
+            .then((response) => response.text())
+            .then((html) => {
+                let table = document.getElementById("table_div");
+                table.innerHTML = html;
+            });
+    }
+
+</script>
